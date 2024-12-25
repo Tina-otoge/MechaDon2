@@ -10,7 +10,7 @@ class Autoreact(db.Base):
     server_id = sa.Column(db.Id, nullable=False, primary_key=True)
     channel_id = sa.Column(db.Id, nullable=False, primary_key=True)
     react = sa.Column(sa.String, nullable=False, primary_key=True)
-    lookup = sa.Column(sa.String, nullable=False, primary_key=True)
+    lookup = sa.Column(sa.String, nullable=False, default="", primary_key=True)
 
     def __str__(self):
         if self.channel_id != "welcome":
